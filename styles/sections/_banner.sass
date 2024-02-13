@@ -1,0 +1,100 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.banner-section
+  padding: 3.5rem 0
+  // background-color: lighten(#000000, 2%)
+  background-color: #24CCA8
+  min-height: 100vh
+  position: relative
+  overflow: hidden
+  scroll-snap-align: center
+  counter-increment: items 1
+
+  .ellipse
+    position: absolute
+    z-index: 1
+    right: 0
+    top: 0
+
+    .ellipse1
+      position: absolute
+      right: 0
+      top: 8rem
+      z-index: 3
+
+    .ellipse2
+      position: absolute
+      right: 0
+      top: 1rem
+      z-index: 2
+
+    .ellipse3
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 1
+
+  .wrapper
+    height: 100%
+    position: relative
+    z-index: 2
+
+  .inner-banner
+    border-radius: 1.1rem
+    color: $dark
+    @include grid($columns: 1fr 1.5fr)
+    align-items: center
+    position: relative
+    height: 100%
+
+    .content
+      position: relative
+      z-index: 2
+      color: $light
+
+      h1
+        font-size: 96px
+        font-weight: 800
+        margin-bottom: 1.5rem
+        line-height: 105px
+        color: $light
+        // text-shadow: 0 2px 8px rgba($dark, .4)
+        // font-family: 'Aileron', sans-serif
+        // font-style: italic
+
+        strong
+          font-size: 2.7rem
+          font-family: 'Satisfy', cursive
+
+      h3
+        font-size: 40px
+
+      h4
+        font-size: 25px
+        font-weight: 400
+        text-transform: uppercase
+
+      p
+        line-height: 150%
+        font-size: 1rem
+        margin: 1.5rem 0
+        color: $light
+
+      .book-button
+        padding: .6rem 2rem
+        margin-top: 1rem
+
+    .image-area
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      height: 100%
+      width: 50%
+      z-index: 1
+
+      img
+        @include image()
+        object-fit: contain

@@ -1,0 +1,54 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.about-section
+  padding-top: 3rem
+
+  .inner-about
+    // background-image: linear-gradient(90deg, $pri, $sec)
+    border-radius: 1.1rem
+    color: $dark
+    @include grid($columns: 1.3fr 1fr)
+    gap: 2rem
+    height: 100%
+    align-items: center
+
+    .content
+      grid-area: 1
+
+      .about-title-area
+        h1
+          font-size: 2rem
+          font-weight: 400
+          margin-bottom: 1rem
+
+      h1, h2, h3
+        font-size: 1.4rem
+        font-weight: 600
+        margin-bottom: 1.5rem
+        line-height: 150%
+
+      h2
+        font-size: 1.3rem
+
+      h3
+        font-size: 1.2rem
+
+      p
+        line-height: 150%
+        font-size: 1rem
+        margin-bottom: 1rem
+        text-align: justify
+
+      .book-button
+        padding: .6rem 2rem
+        margin-top: 1rem
+
+    .image-area
+      height: auto
+      width: 100%
+
+      img
+        @include image()
+        object-fit: contain

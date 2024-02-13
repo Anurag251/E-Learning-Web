@@ -1,0 +1,112 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.feature-section
+  padding: 3.5rem 0
+  // background-color: lighten(#000000, 2%)
+  // background-color: #24CCA8
+  min-height: 100vh
+  position: relative
+  overflow: hidden
+  scroll-snap-align: center
+  counter-increment: items 1
+
+  .ellipse
+    position: absolute
+    z-index: 1
+    right: 0
+    top: 0
+
+    .ellipse1
+      position: absolute
+      right: 0rem
+      top: 0rem
+      z-index: 3
+
+  .wrapper
+    height: 100%
+    position: relative
+    z-index: 2
+
+  .inner-feature
+    border-radius: 1.1rem
+    color: $dark
+    @include grid($columns: 1fr 1fr)
+    align-items: center
+    position: relative
+    height: 100%
+
+    .content
+      position: relative
+      z-index: 2
+      color: $dark
+      padding-left: 2rem
+
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: .3rem
+        background-color: $pri
+        z-index: 1
+
+      ul
+        height: 12rem
+        overflow: auto
+        overflow: auto
+        scroll-snap-type: both mandatory
+        overscroll-behavior-x: contain
+        display: flex
+        flex-direction: column
+
+        li
+          padding: 1rem 0
+          scroll-snap-align: center
+          counter-increment: items 1
+
+      h2
+        font-size: 48px
+        font-weight: 800
+        margin-bottom: 1.5rem
+        color: $dark
+        // text-shadow: 0 2px 8px rgba($dark, .4)
+        // font-family: 'Aileron', sans-serif
+        // font-style: italic
+
+        strong
+          font-size: 2.7rem
+          font-family: 'Satisfy', cursive
+
+      h3
+        font-size: 40px
+
+      h4
+        font-size: 25px
+        font-weight: 400
+        text-transform: uppercase
+
+      p
+        line-height: 150%
+        font-size: 1rem
+        margin: 1.5rem 0
+        color: $dark
+
+      .book-button
+        padding: .6rem 2rem
+        margin-top: 1rem
+
+    .image-area
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      height: 100%
+      width: 40%
+      z-index: 1
+
+      img
+        @include image()
+        object-fit: contain

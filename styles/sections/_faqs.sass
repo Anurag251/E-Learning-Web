@@ -1,0 +1,95 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.faqs-section
+  padding-top: 3rem
+
+  .inner-faqs
+    @include flex($justify: stretch)
+    align-items: flex-start
+    gap: 2rem
+
+    .faqs-title-area
+      margin-bottom: 1.2rem
+      flex: 25rem
+      max-width: 25rem
+      position: sticky
+      top: 5rem
+      left: 0
+
+      h2
+        font-size: 2rem
+        font-weight: 400
+        margin-bottom: 1.5rem
+
+        span
+          font-weight: 700
+
+      p
+        text-align: justify
+        font-size: .8rem
+
+    .faqs-list
+      flex: calc( 100% - 25rem )
+      max-width: calc( 100% - 25rem )
+
+      .item
+        margin-bottom: 1.2rem
+        box-shadow: 0 4px 6px rgba($dark, .1)
+        border-radius: .4rem
+        padding-left: 2rem
+        position: relative
+
+        .marker
+          position: absolute
+          left: 1rem
+          top: 1rem
+          color: $pri
+
+        &.active
+          box-shadow: 0 4px 10px rgba($dark, .1)
+
+          .item-title
+            padding: 1rem 1rem .7rem
+
+            h4
+              color: $pri
+
+            i
+              color: $pri
+              transform: rotate(180deg)
+
+          .inner-item
+            grid-template-rows: 1fr
+
+            p
+              padding: 0 1rem 1rem
+
+        .item-title
+          @include flex($justify: space-between)
+          gap: .5rem
+          align-items: flex-start
+          padding: 1rem
+          cursor: pointer
+
+          h4
+            font-size: 1rem
+            font-weight: 600
+            @include fastTrans()
+
+          i
+            @include fastTrans()
+            margin-top: .1rem
+
+        .inner-item
+          display: grid
+          grid-template-rows: 0
+          overflow: hidden
+          @include fastTrans()
+
+          p
+            font-size: .9rem
+            text-align: justify
+            padding: 0 1rem
+            @include fastTrans()
