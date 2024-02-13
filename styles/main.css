@@ -560,6 +560,11 @@ header .inner-header .side-nav-button {
   overscroll-behavior-x: contain;
   display: flex;
   flex-direction: column;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.feature-section .inner-feature .content ul::-webkit-scrollbar {
+  display: none;
 }
 .feature-section .inner-feature .content ul li {
   padding: 1rem 0;
