@@ -452,9 +452,26 @@ header .inner-header .side-nav-button {
   font-size: 40px;
 }
 .banner-section .inner-banner .content h4 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.banner-section .inner-banner .content .view-featuers {
+  color: #FFFFFF;
+  opacity: 0.9;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+.banner-section .inner-banner .content .view-featuers:hover {
+  opacity: 1;
+}
+.banner-section .inner-banner .content .app-button {
+  margin: 1rem 0;
+}
+.banner-section .inner-banner .content .app-button button {
+  margin-right: 1rem;
+  cursor: pointer;
 }
 .banner-section .inner-banner .content p {
   line-height: 150%;
