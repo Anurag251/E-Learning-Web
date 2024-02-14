@@ -554,13 +554,18 @@ header .inner-header .side-nav-button {
   z-index: 2;
   color: #1F1F1F;
   padding-left: 2rem;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .feature-section .inner-feature .content::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 13rem;
   width: 0.3rem;
   background-color: #24CCA8;
   z-index: 1;
@@ -575,19 +580,25 @@ header .inner-header .side-nav-button {
   flex-direction: column;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  height: 100%;
 }
 .feature-section .inner-feature .content ul::-webkit-scrollbar {
   display: none;
 }
 .feature-section .inner-feature .content ul li {
-  padding: 1rem 0;
   scroll-snap-align: center;
   counter-increment: items 1;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .feature-section .inner-feature .content h2 {
   font-size: 48px;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #1F1F1F;
 }
 .feature-section .inner-feature .content h2 strong {
