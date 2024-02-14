@@ -2,15 +2,24 @@
 @use '../helper/_mixin' as *
 @use '../layout/_layout' as *
 
+@keyframes bounce
+  0%, 100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-20px)
+
 .feature-section
   padding: 3.5rem 0
   // background-color: lighten(#000000, 2%)
-  // background-color: #24CCA8
+  background-color: $light
   min-height: 100vh
   position: relative
   overflow: hidden
   scroll-snap-align: center
   counter-increment: items 1
+  animation: bounce 1s ease-in-out
+  z-index: 2
 
   .ellipse
     position: absolute

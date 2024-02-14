@@ -388,10 +388,12 @@ header .inner-header .side-nav-button {
   padding: 3.5rem 0;
   background-color: #24CCA8;
   min-height: 100vh;
-  position: relative;
+  position: sticky;
+  top: 0;
   overflow: hidden;
   scroll-snap-align: center;
   counter-increment: items 1;
+  z-index: 1;
 }
 .banner-section .ellipse {
   position: absolute;
@@ -501,13 +503,24 @@ header .inner-header .side-nav-button {
      object-fit: contain;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 .feature-section {
   padding: 3.5rem 0;
+  background-color: #FFFFFF;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   scroll-snap-align: center;
   counter-increment: items 1;
+  animation: bounce 1s ease-in-out;
+  z-index: 2;
 }
 .feature-section .ellipse {
   position: absolute;
@@ -619,12 +632,12 @@ header .inner-header .side-nav-button {
 
 footer {
   padding-top: 10rem;
-  margin-top: 4rem;
   background-color: #0F172A;
   position: relative;
   min-height: 100vh;
   scroll-snap-align: center;
   counter-increment: items 1;
+  z-index: 3;
 }
 footer::after {
   content: "";
