@@ -320,10 +320,10 @@ header .inner-header .side-nav-button {
 .banner-section .inner-banner .image-area {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   height: 100%;
-  width: 55%;
+  width: 40rem;
   z-index: 1;
 }
 .banner-section .inner-banner .image-area img {
@@ -458,10 +458,10 @@ header .inner-header .side-nav-button {
 .feature-section .inner-feature .image-area {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   height: 100%;
-  width: 35%;
+  width: 25rem;
   z-index: 1;
 }
 .feature-section .inner-feature .image-area img {
