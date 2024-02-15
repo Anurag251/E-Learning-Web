@@ -379,9 +379,6 @@ header .inner-header .side-nav-button {
 .feature-section .inner-feature {
   border-radius: 1.1rem;
   color: #1F1F1F;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
   align-items: center;
   position: relative;
   height: 100%;
@@ -395,6 +392,7 @@ header .inner-header .side-nav-button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
 .feature-section .inner-feature .content::after {
   content: "";
@@ -418,6 +416,7 @@ header .inner-header .side-nav-button {
   -ms-overflow-style: none;
   scrollbar-width: none;
   height: 100%;
+  width: 100%;
 }
 .feature-section .inner-feature .content ul::-webkit-scrollbar {
   display: none;
@@ -431,6 +430,7 @@ header .inner-header .side-nav-button {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 500px;
 }
 .feature-section .inner-feature .content h2 {
   font-size: 48px;
@@ -468,6 +468,7 @@ header .inner-header .side-nav-button {
   height: 100%;
   width: 25rem;
   z-index: 1;
+  pointer-events: none;
 }
 .feature-section .inner-feature .image-area img {
   height: 100%;
