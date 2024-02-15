@@ -398,9 +398,9 @@ header .inner-header .side-nav-button {
 .feature-section .inner-feature .content::after {
   content: "";
   position: absolute;
-  left: 6rem;
+  left: 10%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   height: 13rem;
   width: 0.3rem;
   background-color: #24CCA8;
@@ -432,6 +432,7 @@ header .inner-header .side-nav-button {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding-left: 4rem;
 }
 .feature-section .inner-feature .content ul li .inner-content {
   max-width: 500px;
