@@ -373,6 +373,7 @@ header .inner-header .side-nav-button {
 }
 .feature-section .wrapper {
   height: 100%;
+  max-width: 100%;
   position: relative;
   z-index: 2;
 }
@@ -397,7 +398,7 @@ header .inner-header .side-nav-button {
 .feature-section .inner-feature .content::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 6rem;
   top: 50%;
   transform: translateY(-50%);
   height: 13rem;
@@ -426,11 +427,20 @@ header .inner-header .side-nav-button {
   counter-increment: items 1;
   min-height: 80vh;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.feature-section .inner-feature .content ul li .inner-content {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 500px;
 }
 .feature-section .inner-feature .content h2 {
   font-size: 48px;
@@ -462,7 +472,7 @@ header .inner-header .side-nav-button {
 }
 .feature-section .inner-feature .image-area {
   position: absolute;
-  right: 0;
+  right: 10%;
   top: 55%;
   transform: translateY(-50%);
   height: 100%;
